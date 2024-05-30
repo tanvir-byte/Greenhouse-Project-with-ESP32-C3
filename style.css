@@ -1,0 +1,331 @@
+html {
+  font-family: Helvetica;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+  background-position: center;
+  transition: background-color 2.5s ease; /* Smooth transition for background color change */
+}
+    /* Style for the credit */
+    .credit {
+        position: fixed; /* Position it relative to the browser window */
+        top: 10px; /* 10px from the bottom */
+        left: 10px; /* 10px from the right */
+        background-color: rgba(27, 114, 0, 0.562); /* Semi-transparent background */
+        color: rgb(255, 255, 255);
+        padding: 5px 4px;
+        border-radius: 5px;
+        z-index: 999;
+        font-family:  'Dancing Script', cursive;
+    }
+.lock-screen, .home-screen {
+  position: relative;
+  width: auto; /* Adjust width to fit your screen size */
+  height: 120vh; /* Adjust height to fit your screen size */
+  transition: opacity 0.5s ease;
+}
+.fade-in {
+  opacity: 1;
+}
+.wallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lock-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lock-content h2 {
+  margin-top: 50px;
+}
+
+.lock-content input[type="password"] {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.lock-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lock-screen {
+  position: relative;
+}
+#pinInput, #unlockBtn {
+  margin:auto;
+
+}
+
+.lock-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lock-content h2,
+.lock-content input,
+.lock-content button {
+  display: block;
+  margin: 0 auto;
+}
+
+.lock-content input {
+  margin-top: 10px; /* Adjust as needed */
+}
+
+
+body {
+  background-color: white;
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhocKOdpEDooUakYvGwLEfNU9JYcWHwNIcGXEFWdzC1ESfePzh17GSKggXFAO2wpYgJJUkToqFejQRb0NBoAGYgCNdWte27inuyD7jTg_Gj5Qr4kBgVCx0s2so3hb1ku1OAb6Wydv5ITny0iWtXmZlx0zckJEw0HQd6u48LTik3y7AbzHUGi7tOYsfb_-ri/s1600/4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 2.5s ease;
+  margin: -10; /* remove default body margin */
+  padding: -10; /* remove default body padding */
+  height: 100vh; /* set body height to full viewport height */
+}
+
+.dark-mode {
+  background-color: #000000; /* Dark background color */
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLoDLZfnoAg54Ql1tAUxuuzk_LG3OGIejW_pTI6jSVS9ypqOaRXF9NJqtj8UfUvgoR4D0m7sQUUHb9klIoZgA6QuLg4jPPhkpRboCXiNomjxu3p4vUdpRWLf5-Y5rXeyXK5xREGLVX9wtrwxG5YXh3HfCY1aizPiKaPBT52GCxXU0xyOIt3JDONAYR0rnd/s1600/3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 2.5s ease;
+  margin: -10; /* remove default body margin */
+  padding: -10; /* remove default body padding */
+  height: 100vh; /* set body height to full viewport height */
+}
+
+h2{
+  color: #0F3376;
+  padding: 2vh;
+  text-shadow: 2px 2px 4px rgb(224, 7, 7); /* Adjust values as needed */
+}
+
+p {
+  font-size: 1.5rem;
+  color: rgb(72, 158, 2);
+}
+
+.button {
+  display: inline-block;
+  background-color: #0300ba;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 16px 40px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #00268e; /* Darken the color on hover */
+}
+
+.button2 {
+  background-color: #f45c36;
+}
+
+.button2:hover {
+  background-color: #b22e0a; /* Darken the color on hover */
+}
+.thermometer {
+  width: 70px;
+  height: 200px;
+  background-color: #ddd;
+  border: 2px solid #333;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mercury {
+  width: 100%;
+  background-color: red; /* Change color as per your design */
+  position: absolute;
+  bottom: 0;
+  transition: height 0.5s;
+  border-radius: 0 0 10px 10px;
+ 
+  
+}
+
+.thermometer:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.thermometer:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
+}
+.glass {
+  width: 100px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 0 0 20% 20%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #ddd;
+}
+
+.water {
+  width: 100%;
+  background-color: rgb(38, 0, 255); /* Change color as per your design */
+  position: absolute;
+  bottom: 0;
+
+  transition: height 0.5s;
+  border-radius: 0 0 10px 10px;
+}
+.ml-mark {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #8802b1;
+  font-weight: bold;
+}
+
+.scale {
+  width: 200px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 20% 20% 20% 20%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #ddd;
+}
+
+
+.drew {
+  height: 100%;
+  background-color: rgb(255, 4, 4); /* Change color as per your design */
+  position: absolute;
+  left: 0;
+  right: 35px;
+  transition: width 0.5s;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.bench {
+  width: 200px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 20% 20% 20% 20%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #ddddddaf;
+}
+
+.soil {
+  height: 100%;
+  background-color: rgba(134, 3, 3, 0.37); /* Change color as per your design */
+  position: absolute;
+  left: 0;
+  right: 120px;
+  transition: width 0.5s;
+  border-radius: 10px 10px 10px 10px;
+}
+.line {
+  width: 200px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 20% 20% 20% 20%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #ddddddaf;
+}
+
+.tick {
+  height: 100%;
+  background-color: rgb(4, 112, 27); /* Change color as per your design */
+  position: absolute;
+  left: 0;
+  right: 97px;
+  transition: width 0.5s;
+  border-radius:10px 10px 10px 10px;
+}
+.door {
+  width: 100px; /* Doubled the width to accommodate left-to-right opening */
+  height: 200px;
+  background-color: #0e0116;
+  position: relative;
+  overflow: hidden;
+  /* Add your text below */
+color: rgb(255, 255, 255); /* Set text color to white */
+display: flex; /* Use flexbox for centering */
+align-items: center; /* Center vertically */
+justify-content: center; /* Center horizontally */
+}
+.door::before {
+content: "Door Closed"; /* Add the text "@foo" before the panel */
+font-size: 20px; /* Set the font size */
+}
+
+.panel {
+width: 100%; /* Set width to 100% */
+height: 100%;
+background-color: #4ce207;
+position: absolute;
+top: 0;
+left: -100%; /* Start from the left, outside the door */
+transition: transform 0.5s ease-in-out; /* Change the transition property */
+transform-origin: left; /* Set transform origin to left */
+/* Add your text below */
+color: rgb(0, 0, 0); /* Set text color to white */
+display: flex; /* Use flexbox for centering */
+align-items: center; /* Center vertically */
+justify-content: center; /* Center horizontally */
+}
+
+.panel::before {
+content: "Door Opened"; /* Add the text "@foo" before the panel */
+font-size: 20px; /* Set the font size */
+}
+
+
+
+.open {
+  transform: translateX(100%); /* Translate to the right to open the door */
+}
